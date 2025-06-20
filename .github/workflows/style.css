@@ -1,0 +1,531 @@
+/* General Styles */
+body {
+    font-family: 'Comic Sans MS', sans-serif; /* Fuente divertida y amigable para niños */
+    margin: 0;
+    padding: 0;
+    background-color: #ff69b4; /* Fondo claro */
+    background: url('Mg1.png') no-repeat center center fixed; /* Imagen de fondo fija */
+    background-size: cover;
+    margin-top: 100px; /* Ajusta este valor según la altura de tu header */
+}
+
+/* Noticias - Sección con efecto de ventana */
+#noticias {
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente */
+    padding: 40px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustes visuales para las noticias */
+#noticias h2 {
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#noticias ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#noticias ul li {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #ffeb3b;
+    border-radius: 5px;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Otros estilos */
+header, footer, section {
+    position: relative;
+    z-index: 1;
+}
+
+/* Mantener el fondo fijo en su lugar */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: url('IMG3.png') no-repeat center center fixed;*/
+    background-size: cover;
+    z-index: -1; /* Asegura que el fondo esté detrás del contenido */
+    opacity: 0.3; /* Ajusta la opacidad para que no sea demasiado fuerte */
+}
+
+h1, h2, h3 {
+    color: #ffffff; /* Texto oscuro para mejor legibilidad */
+    text-align: center;
+}
+
+p, a, li {
+    font-size: 16px; /* Tamaño de fuente legible */
+    color: #555; /* Color de texto secundario */
+}
+.textsss{
+    font-size: 20px; 
+    color: #ffffff; 
+}
+/* Header Styles */
+header {
+    background-color: #ff69b4; /* Fondo rosa vibrante */
+    color: #ffffff; /* Texto blanco */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para un efecto moderno */
+    /*position: fixed; /* Hace que el header se mantenga fijo en la parte superior */
+    top: 0; /* Posición fija en la parte superior de la pantalla */
+    width: 100%; /* Abarca todo el ancho de la página */
+    z-index: 1000; /* Se asegura de que el header esté por encima del contenido */
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 80px; /* Tamaño ajustado del logo */
+    width: auto;
+    margin-right: 10px;
+}
+
+.nav_principal {
+    background-color:  #343a40; /* Fondo rosa más suave para navegación */
+    padding: 1em;
+}
+
+.nav_principal ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav_principal a {
+    color: #fff; /* Texto blanco */
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav_principal a:hover {
+    background-color: #ff69b4; /* Efecto hover en los enlaces */
+}
+
+.nav_principal a.active {
+    background-color: #34C759; /* Color verde para el enlace activo */
+    border-bottom: 3px solid #34C759;
+}
+
+/* Carrusel Styles */
+.carrusel {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.carrusel-contenedor {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carrusel-imagen {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.carrusel-controles {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.carrusel-anterior, .carrusel-siguiente {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carrusel-anterior:hover, .carrusel-siguiente:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Section Styles */
+section {
+    padding: 0px 0px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+    color: #ff4081; /* Títulos vibrantes */
+}
+
+ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Video Section Styles */
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.video-thumbnail {
+    margin: 10px;
+    width: 200px;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.video-thumbnail a {
+    text-decoration: none;
+    color: #000;
+}
+
+.video-thumbnail a:hover {
+    opacity: 0.8;
+}
+
+/* Footer Styles */
+.footer {
+    /*background-color: #f9f9f9;
+    padding: 20px 0;
+    font-family: 'Comic Sans MS', sans-serif;*/
+}
+.footer-txt {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.footer-link {
+    color: #ff69b4;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #ff4081;
+    text-decoration: underline;
+}
+
+.footer-social .social-icon {
+    font-size: 24px;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 10px; /* Bordes redondeados pero en forma cuadrada */
+    margin: 0 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon-f {
+    background-color: #3b5998; /* Facebook */
+}
+
+.social-icon-y {
+    background-color: #ff0000; /* YouTube */
+}
+
+.social-icon-i {
+    background-color: #e4405f; /* Instagram */
+}
+
+.social-icon-a {
+    background-color: #34C759; /* Android */
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+.footer .copyright {
+    background-color: #ff69b4;
+    padding: 15px 0;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Responsive Design */
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .carrusel {
+        height: 300px;
+    }
+
+    .carrusel-imagen {
+        height: 300px;
+    }
+
+    .nav_principal ul {
+        flex-direction: column;
+    }
+
+    .nav_principal li {
+        margin-bottom: 10px;
+    }
+
+    .footer-social .social-icon {
+        padding: 10px;
+        font-size: 20px;
+    }
+}
+
+/* Pantallas muy pequeñas (smartphones) */
+@media (max-width: 480px) {
+    .footer-txt {
+        font-size: 14px;
+    }
+
+    .nav_principal a {
+        font-size: 14px;
+    }
+
+    .footer-social .social-icon {
+        padding: 8px;
+        font-size: 18px;
+    }
+}
+
+/**  CARACTERISTICAS DEL JUEGO**/
+#juego {
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+    z-index: 1; /* Asegura que el contenido esté por encima del pseudo-elemento */
+}
+
+#juego::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Mg2.png'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 100%; /* Controla la opacidad del wallpaper (10%) */
+    z-index: -1; /* Envía el pseudo-elemento al fondo */
+}
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.border-title {
+    border: 2px solid #fff;
+    padding: 10px;
+    display: inline-block;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px; /* Espacio entre las imágenes */
+    margin-top: 10px;
+}
+
+.image-container {
+    position: relative;
+    width: 30%; /* Cada imagen ocupará el 30% del ancho del contenedor */
+    max-width: 300px; /* Máximo ancho de la imagen */
+    height: 100%; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Opcional: Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: Sombra para las imágenes */
+    transition: transform 0.3s ease; /* Efecto de zoom al pasar el ratón */
+}
+
+.game-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Cambiado a 'contain' para mostrar la imagen completa */
+}
+
+.image-container:hover .game-image {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 45px; /* Bordes redondeados */
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.icons {
+    margin-top: 10px;
+}
+
+.icons i {
+    margin: 0 5px;
+    font-size: 20px;
+}
+
+
+
+
+/**  NOTICIAS **/
+#noticias {
+    padding: 30px;
+    background-color: #f9f9f9; /* Fondo suave para la sección */
+    opacity: 100%; /* Controla la opacidad del wallpaper (10%) */
+}
+
+.news-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre la imagen y el texto */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en dispositivos más pequeños */
+}
+
+.news-image {
+    width: 40%; /* La imagen ocupará el 40% del espacio */
+    max-width: 300px; /* Tamaño máximo de la imagen */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.news-text {
+    width: 55%; /* El texto ocupará el 55% del espacio */
+    color: #333; /* Color del texto */
+    font-size: 1rem; /* Tamaño de letra legible */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+@media (max-width: 768px) {
+    .news-image, .news-text {
+        width: 100%; /* En pantallas pequeñas, ambos elementos ocuparán el 100% del ancho */
+        text-align: center;
+    }
+}
+
+/**  Politica y Privacidad **/
+#Politica {
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.policy-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.policy-section {
+    margin-bottom: 20px;
+}
+
+.policy-section h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.policy-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+/*MATERIAL EDUCATIVO DESCARGABLE*/
+#contenido-descargable {
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.5), rgba(255, 0, 255, 0.5), rgba(128, 0, 128, 0.5));
+}
+.h3.text-white {
+    color: white;
+}
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*CONTACTO*/
+#contacto {
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.5), rgba(255, 0, 255, 0.5), rgba(128, 0, 128, 0.5));
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.contact-form .form-control {
+    border: none;
+    border-bottom: 2px solid #007bff;
+    border-radius: 0;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: transparent;
+    color: black; /* Color negro para los campos */
+}
+.contact-form .form-control:focus {
+    box-shadow: none;
+    border-color: #0056b3;
+}
+.contact-form .btn {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+.contact-form .btn:hover {
+    background-color: #0056b3;
+}

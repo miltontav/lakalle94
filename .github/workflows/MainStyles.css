@@ -1,0 +1,254 @@
+body {
+    font-family: Open Sans, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #212121;
+    color: #FFFFFF;
+    padding: 1em;
+    text-align: center;
+}
+.logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 150px; /* Ajusta la altura del logo */
+    width: auto; /* Mantiene la proporción del logo */
+    margin-right: 10px;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+section {
+    background-color: #FFFFFF;
+    padding: 1em;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+   color: #fefdff;
+   margin-bottom: 10px; 
+}
+h2 {
+    color: #212121;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #34C759;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2ECC71;
+}
+
+
+
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.video-thumbnail {
+    margin: 10px;
+    width: 200px;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.video-thumbnail a {
+    text-decoration: none;
+    color: #000;
+}
+
+.video-thumbnail a:hover {
+    opacity: 0.8;
+}
+
+.nav_principal {
+    background-color: #212121;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav_principal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_principal li {
+    width: 100%;
+}
+
+.btn-nav {
+    background-color: #333;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.btn-nav:hover {
+    background-color: #444;
+}
+
+.btn-nav i {
+    margin-right: 10px;
+}
+
+.nav_principal a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav_principal a:hover {
+    color: #34C759;
+}
+
+.nav_principal a.active {
+    color: #34C759;
+    border-bottom: 2px solid #34C759;
+}
+
+.nav_principal a::after {
+    width: 0%;
+    height: 2px;
+    background-color: #34C759;
+    transition: width 0.2s ease;
+}
+
+.nav_principal a:hover::after {
+    width: 100%;
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .nav_principal ul {
+        flex-direction: column;
+    }
+    
+    .nav_principal li {
+        margin-bottom: 10px;
+    }
+    
+    .btn-nav {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Pantallas muy pequeñas (smartphones) */
+@media (max-width: 480px) {
+    .nav_principal {
+        padding: 0.5em;
+    }
+    
+    .btn-nav {
+        padding: 5px;
+        font-size: 12px;
+    }
+}
+
+
+/*Inicio*/
+.carrusel {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.carrusel-contenedor {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carrusel-imagen {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease;
+}
+
+.carrusel-controles {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrusel-anterior,
+.carrusel-siguiente {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.carrusel-anterior:hover,
+.carrusel-siguiente:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+    .carrusel {
+        width: 100%;
+        height: 300px;
+    }
+    .carrusel img {
+        width: 100%;
+        height: 300px;
+    }
+}
